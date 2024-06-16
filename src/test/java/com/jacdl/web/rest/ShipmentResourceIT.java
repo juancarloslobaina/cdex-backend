@@ -130,6 +130,16 @@ class ShipmentResourceIT {
             provider = TestUtil.findAll(em, Provider.class).get(0);
         }
         shipment.setProvider(provider);
+        // Add required entity
+        Beneficiary beneficiary;
+        if (TestUtil.findAll(em, Beneficiary.class).isEmpty()) {
+            beneficiary = BeneficiaryResourceIT.createEntity(em);
+            em.persist(beneficiary);
+            em.flush();
+        } else {
+            beneficiary = TestUtil.findAll(em, Beneficiary.class).get(0);
+        }
+        shipment.setBeneficiary(beneficiary);
         return shipment;
     }
 
@@ -169,6 +179,16 @@ class ShipmentResourceIT {
             provider = TestUtil.findAll(em, Provider.class).get(0);
         }
         shipment.setProvider(provider);
+        // Add required entity
+        Beneficiary beneficiary;
+        if (TestUtil.findAll(em, Beneficiary.class).isEmpty()) {
+            beneficiary = BeneficiaryResourceIT.createUpdatedEntity(em);
+            em.persist(beneficiary);
+            em.flush();
+        } else {
+            beneficiary = TestUtil.findAll(em, Beneficiary.class).get(0);
+        }
+        shipment.setBeneficiary(beneficiary);
         return shipment;
     }
 

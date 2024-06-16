@@ -92,7 +92,7 @@ relationship ManyToOne {
     Shipment{client required} to Client
     Shipment{provider required} to Provider
     Shipment{delivery} to Delivery
-    Shipment{beneficiary} to Beneficiary
+    Shipment{beneficiary required} to Beneficiary
     Notification{user(login) required} to User with builtInEntity        
     Beneficiary{user(login) required} to User with builtInEntity            
     Chat{from(login) required} to User with builtInEntity 

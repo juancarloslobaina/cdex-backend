@@ -11,23 +11,23 @@
     <property name="datetimeType" value="datetime" dbms="postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616133951_added_entity_Chat.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134051_added_entity_Provider.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134151_added_entity_Client.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134251_added_entity_Delivery.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134351_added_entity_Beneficiary.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134451_added_entity_Shipment.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134551_added_entity_Notification.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134651_added_entity_Product.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151130_added_entity_Chat.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151230_added_entity_Provider.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151330_added_entity_Client.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151430_added_entity_Delivery.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151530_added_entity_Beneficiary.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151630_added_entity_Shipment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151730_added_entity_Notification.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151830_added_entity_Product.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
-    <include file="config/liquibase/changelog/20240616133951_added_entity_constraints_Chat.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134051_added_entity_constraints_Provider.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134151_added_entity_constraints_Client.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134251_added_entity_constraints_Delivery.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134351_added_entity_constraints_Beneficiary.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134451_added_entity_constraints_Shipment.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134551_added_entity_constraints_Notification.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20240616134651_added_entity_constraints_Product.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151130_added_entity_constraints_Chat.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151230_added_entity_constraints_Provider.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151330_added_entity_constraints_Client.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151430_added_entity_constraints_Delivery.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151530_added_entity_constraints_Beneficiary.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151630_added_entity_constraints_Shipment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151730_added_entity_constraints_Notification.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240616151830_added_entity_constraints_Product.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

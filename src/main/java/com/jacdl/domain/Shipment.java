@@ -76,7 +76,8 @@ public class Shipment implements Serializable {
     @JsonIgnoreProperties(value = { "user", "providers" }, allowSetters = true)
     private Delivery delivery;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(optional = false)
+    @NotNull
     @JsonIgnoreProperties(value = { "user" }, allowSetters = true)
     private Beneficiary beneficiary;
 

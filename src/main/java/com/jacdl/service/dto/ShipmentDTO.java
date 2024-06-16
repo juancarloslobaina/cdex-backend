@@ -48,6 +48,7 @@ public class ShipmentDTO implements Serializable {
 
     private DeliveryDTO delivery;
 
+    @NotNull
     private BeneficiaryDTO beneficiary;
 
     public Long getId() {

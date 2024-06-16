@@ -1,6 +1,6 @@
 {
   "annotations": {
-    "changelogDate": "20240616134451"
+    "changelogDate": "20240616151630"
   },
   "applications": ["cdex"],
   "dto": "mapstruct",
@@ -72,7 +72,8 @@
       "otherEntityName": "beneficiary",
       "relationshipName": "beneficiary",
       "relationshipSide": "left",
-      "relationshipType": "many-to-one"
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
     }
   ],
   "searchEngine": "no",

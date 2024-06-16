@@ -8,7 +8,7 @@
     <!--
         Added the constraints for entity Shipment.
     -->
-    <changeSet id="20240616134451-2" author="jhipster">
+    <changeSet id="20240616151630-2" author="jhipster">
 
         <addForeignKeyConstraint baseColumnNames="client_id"
                                  baseTableName="shipment"

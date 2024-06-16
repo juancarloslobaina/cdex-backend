@@ -6,20 +6,13 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     <!--
-        Added the constraints for entity Chat.
+        Added the constraints for entity Notification.
     -->
-    <changeSet id="20240616133951-2" author="jhipster">
+    <changeSet id="20240616151730-2" author="jhipster">
 
-        <addForeignKeyConstraint baseColumnNames="from_id"
-                                 baseTableName="chat"
-                                 constraintName="fk_chat__from_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="jhi_user"
-                                 />
-
-        <addForeignKeyConstraint baseColumnNames="to_id"
-                                 baseTableName="chat"
-                                 constraintName="fk_chat__to_id"
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="notification"
+                                 constraintName="fk_notification__user_id"
                                  referencedColumnNames="id"
                                  referencedTableName="jhi_user"
                                  />

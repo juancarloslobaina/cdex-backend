@@ -1,11 +1,11 @@
-id;reference;amount;created_at;status;type;active;screenshot;screenshot_content_type;client_id;provider_id
-1;lively furthermore;8676.09;2024-06-16T13:10:53;ASSIGNED;FOOD;false;../fake-data/blob/hipster.png;image/png;1;1
-2;eek geez geez;16966.47;2024-06-15T22:15:37;REFUSED;ALL;true;../fake-data/blob/hipster.png;image/png;2;2
-3;underwriting upgrade;16810.13;2024-06-16T10:46:29;REFUSED;ALL;true;../fake-data/blob/hipster.png;image/png;2;2
-4;govern boohoo suffocation;25514.41;2024-06-15T19:31:37;ASSIGNED;MONEY;false;../fake-data/blob/hipster.png;image/png;2;1
-5;till;28796.9;2024-06-15T21:49:47;ACCEPTED;FOOD;false;../fake-data/blob/hipster.png;image/png;2;2
-6;victoriously to gadzooks;29714.73;2024-06-16T09:38:42;CANCELED;ALL;true;../fake-data/blob/hipster.png;image/png;2;2
-7;by crib toward;2575.11;2024-06-16T03:32:17;COMPLETED;ALL;true;../fake-data/blob/hipster.png;image/png;2;1
-8;alongside;18603.72;2024-06-16T12:35:57;ACCEPTED;ALL;true;../fake-data/blob/hipster.png;image/png;2;1
-9;yippee per difficulty;27388.49;2024-06-15T21:02:12;ACCEPTED;ALL;false;../fake-data/blob/hipster.png;image/png;1;1
-10;yummy duh ex-wife;27979.01;2024-06-16T13:31:29;ONWAY;FOOD;true;../fake-data/blob/hipster.png;image/png;1;1
+id;reference;amount;created_at;status;type;active;screenshot;screenshot_content_type;client_id;provider_id;beneficiary_id
+1;lively furthermore;8676.09;2024-06-16T14:42:32;ASSIGNED;FOOD;false;../fake-data/blob/hipster.png;image/png;1;1;1
+2;eek geez geez;16966.47;2024-06-15T23:47:16;REFUSED;ALL;true;../fake-data/blob/hipster.png;image/png;2;2;2
+3;underwriting upgrade;16810.13;2024-06-16T12:18:08;REFUSED;ALL;true;../fake-data/blob/hipster.png;image/png;2;2;3
+4;govern boohoo suffocation;25514.41;2024-06-15T21:03:16;ASSIGNED;MONEY;false;../fake-data/blob/hipster.png;image/png;2;1;4
+5;till;28796.9;2024-06-15T23:21:26;ACCEPTED;FOOD;false;../fake-data/blob/hipster.png;image/png;2;2;5
+6;victoriously to gadzooks;29714.73;2024-06-16T11:10:21;CANCELED;ALL;true;../fake-data/blob/hipster.png;image/png;2;2;6
+7;by crib toward;2575.11;2024-06-16T05:03:56;COMPLETED;ALL;true;../fake-data/blob/hipster.png;image/png;2;1;7
+8;alongside;18603.72;2024-06-16T14:07:36;ACCEPTED;ALL;true;../fake-data/blob/hipster.png;image/png;2;1;8
+9;yippee per difficulty;27388.49;2024-06-15T22:33:51;ACCEPTED;ALL;false;../fake-data/blob/hipster.png;image/png;1;1;9
+10;yummy duh ex-wife;27979.01;2024-06-16T15:03:08;ONWAY;FOOD;true;../fake-data/blob/hipster.png;image/png;1;1;10

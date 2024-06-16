@@ -8,7 +8,7 @@
     <!--
         Added the constraints for entity Provider.
     -->
-    <changeSet id="20240616134051-2" author="jhipster">
+    <changeSet id="20240616151230-2" author="jhipster">
 
         <addForeignKeyConstraint baseColumnNames="user_id"
                                  baseTableName="provider"
