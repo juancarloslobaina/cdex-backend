@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "changelogDate": "20240616134051"
+  },
+  "applications": ["cdex"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "referralCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Provider",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required",
+      "relationshipWithBuiltInEntity": true
+    },
+    {
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "provider",
+      "relationshipName": "client",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "delivery",
+      "otherEntityRelationshipName": "provider",
+      "relationshipName": "delivery",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

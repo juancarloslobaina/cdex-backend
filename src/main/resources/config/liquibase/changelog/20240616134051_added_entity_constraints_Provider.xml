@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Provider.
+    -->
+    <changeSet id="20240616134051-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="provider"
+                                 constraintName="fk_provider__user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="provider_id"
+                                 baseTableName="rel_provider__client"
+                                 constraintName="fk_rel_provider__client__provider_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="provider"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="client_id"
+                                 baseTableName="rel_provider__client"
+                                 constraintName="fk_rel_provider__client__client_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="client"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="provider_id"
+                                 baseTableName="rel_provider__delivery"
+                                 constraintName="fk_rel_provider__delivery__provider_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="provider"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="delivery_id"
+                                 baseTableName="rel_provider__delivery"
+                                 constraintName="fk_rel_provider__delivery__delivery_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="delivery"
+                                 />
+    </changeSet>
+</databaseChangeLog>

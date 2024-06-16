@@ -1,0 +1,118 @@
+application {
+    config {
+        baseName cdex
+        packageName com.jacdl
+        authenticationType jwt
+        prodDatabaseType postgresql
+        buildTool maven
+        clientFramework angular
+        cacheProvider ehcache
+        databaseType sql
+        nativeLanguage es
+        languages [en, es]
+        applicationType monolith
+        reactive false                
+        skipClient true
+    }
+    entities *
+}
+
+entity Chat{
+	message String required
+    createdAt Instant required
+    status MessageStatus
+}
+
+entity Provider {    
+    referralCode String required        
+}
+
+entity Client {    
+    balance BigDecimal        
+}
+
+entity Delivery {        
+    cashAvailable BigDecimal required
+    location String
+}
+
+entity Beneficiary {    
+	alias String required
+    phone String required    
+    city String required
+    address String
+    referenceAddress String
+}
+
+entity Shipment {
+    reference String required
+    amount BigDecimal required
+    createdAt Instant required
+    status ShipmentStatus required
+    type ShiptmentType required    
+    active Boolean required
+    screenshot ImageBlob required 
+}
+
+entity Notification {
+    reference String required    
+    createdAt Instant required
+    status NotificationStatus required
+}
+
+entity Product {
+    name String required
+	description String required
+    price BigDecimal
+    active Boolean
+}
+
+
+enum ShipmentStatus {
+   CREATED, ACCEPTED, ASSIGNED, ONWAY, COMPLETED, CANCELED, REFUSED
+}
+
+enum ShiptmentType {
+    ALL, MONEY, FOOD
+}
+
+enum NotificationStatus  {
+    NEW, READ
+}
+
+enum MessageStatus {
+	SEND, READ, DELETED
+}
+
+enum CountryCode  {
+    CU, US
+}
+
+relationship ManyToOne {
+    Shipment{client required} to Client
+    Shipment{provider required} to Provider
+    Shipment{delivery} to Delivery
+    Shipment{beneficiary} to Beneficiary
+    Notification{user(login) required} to User with builtInEntity        
+    Beneficiary{user(login) required} to User with builtInEntity            
+    Chat{from(login) required} to User with builtInEntity 
+    Chat{to(login) required} to User with builtInEntity 
+    Product{provider} to Provider
+}
+
+relationship ManyToMany{	
+    Provider to Client
+    Provider to Delivery
+}
+
+relationship OneToOne{       
+    Provider{user(login) required} to User with builtInEntity
+    Client{user(login) required} to User with builtInEntity 
+    Delivery {user(login) required} to User with builtInEntity
+}
+
+
+
+filter Shipment, Notification, Beneficiary, Product, Chat
+use mapstruct, serviceImpl, pagination for *
+

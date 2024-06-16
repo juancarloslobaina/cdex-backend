@@ -1,0 +1,80 @@
+{
+  "annotations": {
+    "changelogDate": "20240616134451"
+  },
+  "applications": ["cdex"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "reference",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "ShipmentStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "CREATED,ACCEPTED,ASSIGNED,ONWAY,COMPLETED,CANCELED,REFUSED"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "ShiptmentType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ALL,MONEY,FOOD"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "screenshot",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Shipment",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "client",
+      "relationshipName": "client",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "provider",
+      "relationshipName": "provider",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "delivery",
+      "relationshipName": "delivery",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "beneficiary",
+      "relationshipName": "beneficiary",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

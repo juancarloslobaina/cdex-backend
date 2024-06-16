@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20240616134151"
+  },
+  "applications": ["cdex"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "balance",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "name": "Client",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required",
+      "relationshipWithBuiltInEntity": true
+    },
+    {
+      "otherEntityName": "provider",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "provider",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
